@@ -16,7 +16,6 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-```
 
 **설명:**
 - `command`: 빌드 명령어
