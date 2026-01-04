@@ -53,10 +53,16 @@
           </div>
         </header>
 
+        <!-- 📌 상단 광고 -->
+        <AdSense class="mb-8" />
+
         <!-- 본문 -->
         <div class="article-content">
           <ContentRenderer :value="data" />
         </div>
+
+        <!-- 📌 하단 광고 -->
+        <AdSense class="mt-8 mb-8" />
 
         <!-- 하단 네비게이션 -->
         <footer class="mt-16 md:mt-20 pt-8 md:pt-10 border-t border-gray-200">

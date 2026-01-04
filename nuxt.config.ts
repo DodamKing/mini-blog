@@ -19,6 +19,16 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      meta: [
+        { name: 'google-site-verification', content: 'PlYdRNSi1zGbnQC-1UtvTw81FjJ-zoEHv4n_V4dW360' }
+      ],
+      script: [
+        {
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7892198097991803',
+          async: true,
+          crossorigin: 'anonymous'
+        }
+      ],
     }
   },
 
