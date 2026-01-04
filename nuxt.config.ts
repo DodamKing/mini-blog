@@ -20,8 +20,17 @@ export default defineNuxtConfig({
   // SSG 모드 명시
   ssr: false,
   
-  // 정적 생성
   nitro: {
-    preset: 'static',  // Netlify 프리셋!
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+      failOnError: false
+    }
+  },
+
+  // generate 제거하고 이것만!
+  experimental: {
+    payloadExtraction: false
   }
 })
