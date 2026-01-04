@@ -16,34 +16,3 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-
-**설명:**
-- `command`: 빌드 명령어
-- `publish`: 배포할 폴더 (Nuxt 4는 `.output/public`)
-- `NODE_VERSION`: Node.js 버전
-- `redirects`: SPA 라우팅 처리
-
----
-
-## 4. `.gitignore` 확인
-```
-# Nuxt
-.nuxt
-.output
-.data
-.env
-dist
-
-# Dependencies
-node_modules
-
-# Logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode
-.idea
