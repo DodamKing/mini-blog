@@ -114,10 +114,37 @@ const formatDate = (dateStr) => {
   })
 }
 
+// 동적 SEO - 각 글의 내용으로 검색되게!
 useHead({
-  title: data.value?.title || '글',
+  // 제목 = 검색 결과 제목
+  title: () => data.value?.title || '글',
+  
   meta: [
-    { name: 'description', content: data.value?.description || '' }
+    // description = 검색 결과 미리보기 (제일 중요!)
+    { 
+      name: 'description', 
+      content: () => data.value?.description || '' 
+    },
+    
+    // keywords = 이 글의 핵심 키워드들 (검색 노출용)
+    { 
+      name: 'keywords', 
+      content: () => data.value?.tags?.join(', ') || '' 
+    },
+    
+    // 작성일 (최신성 SEO)
+    { 
+      name: 'article:published_time', 
+      content: () => data.value?.publishedAt || '' 
+    },
+  ],
+  
+  // 중복 방지
+  link: [
+    { 
+      rel: 'canonical', 
+      href: () => `https://blog.dimad.kr/p/${route.params.slug}` 
+    }
   ]
 })
 </script>

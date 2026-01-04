@@ -81,6 +81,7 @@ id: ${nextId}
 slug: "${slug}"
 title: "${title.replace(/"/g, '\\"')}"
 description: "한 줄 요약 (SEO 중요!)"
+tags: []
 publishedAt: "${publishedAt}"
 heroImage: "/images/posts/${nextId}/hero.webp"
 ---

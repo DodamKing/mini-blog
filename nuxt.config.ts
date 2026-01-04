@@ -5,10 +5,15 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
 
   css: ['~/assets/css/main.css'],
+
+  site: {
+    url: 'https://blog.dimad.kr',
+  },
 
   app: {
     head: {

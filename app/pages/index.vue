@@ -11,11 +11,6 @@
         <div class="absolute bottom-10 left-1/4 w-12 h-12 bg-blue-200 rounded-full opacity-20 animate-bounce"
           style="animation-delay: 1s;"></div>
 
-        <!-- 이모지 -->
-        <div class="text-5xl md:text-6xl mb-4 animate-wiggle">
-          💪✨
-        </div>
-
         <!-- 타이틀 -->
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
@@ -129,7 +124,12 @@ const transformPost = (post) => {
 useHead({
   title: '라온로그 - 건강하고 스마트한 선택',
   meta: [
-    { name: 'description', content: '단백질, 운동, 그리고 일상의 작은 팁들을 공유하는 공간' }
+    { name: 'description', content: '단백질, 운동, 그리고 일상의 작은 팁들을 공유하는 공간' },
+    { property: 'og:title', content: '라온로그 - 건강하고 스마트한 선택' },
+    { property: 'og:description', content: '단백질, 운동, 그리고 일상의 작은 팁들을 공유하는 공간' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://blog.dimad.kr' },
+    { name: 'twitter:card', content: 'summary_large_image' }
   ]
 })
 </script>
