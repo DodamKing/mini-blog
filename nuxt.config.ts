@@ -15,5 +15,17 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     }
+  },
+
+  // SSG 모드 명시
+  ssr: true,
+  
+  // 정적 생성
+  nitro: {
+    preset: 'netlify',  // Netlify 프리셋!
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
   }
 })
