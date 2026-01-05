@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -27,6 +27,18 @@ export default defineNuxtConfig({
           src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7892198097991803',
           async: true,
           crossorigin: 'anonymous'
+        },
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-ZZ4KPRB1WV',
+          async: true
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZZ4KPRB1WV');
+          `
         }
       ],
     }
