@@ -15,6 +15,12 @@ export default defineNuxtConfig({
     url: 'https://blog.dimad.kr',
   },
 
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/urls.ts'
+    ]
+  },
+
   app: {
     head: {
       charset: 'utf-8',
