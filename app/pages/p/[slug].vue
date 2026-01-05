@@ -297,7 +297,7 @@ useHead({
 /* 링크 */
 .article-content :deep(a) {
   color: #EC4899;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 4px;
   text-decoration-thickness: 1.5px;
   word-break: break-all;
@@ -422,5 +422,21 @@ useHead({
   height: 1px;
   background: linear-gradient(to right, transparent, #E5E7EB, transparent);
   margin: 3rem 0;
+}
+
+/* 제목 안의 앵커 링크는 일반 텍스트처럼 */
+.article-content :deep(h2 a),
+.article-content :deep(h3 a),
+.article-content :deep(h4 a) {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* 실제 외부 링크만 스타일 적용 */
+.article-content :deep(a[target="_blank"]) {
+  cursor: pointer;
+  pointer-events: auto;
 }
 </style>
