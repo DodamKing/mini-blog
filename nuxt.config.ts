@@ -6,20 +6,20 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/sitemap',
   ],
 
   css: ['~/assets/css/main.css'],
 
-  site: {
-    url: 'https://blog.dimad.kr',
-  },
+  // site: {
+  //   url: 'https://blog.dimad.kr',
+  // },
 
-  sitemap: {
-    sources: [
-      '/api/__sitemap__/urls.ts'
-    ]
-  },
+  // sitemap: {
+  //   sources: [
+  //     '/api/__sitemap__/urls.ts'
+  //   ]
+  // },
 
   app: {
     head: {
@@ -51,13 +51,13 @@ export default defineNuxtConfig({
   },
 
   // SSG 모드 명시
-  ssr: false,
+  ssr: true,
   
   nitro: {
     preset: 'static',
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
+      routes: ['/', '/sitemap.xml'],
       failOnError: false
     }
   },
