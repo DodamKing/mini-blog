@@ -77,9 +77,7 @@
 const POSTS_PER_PAGE = 12
 
 const { data: allPosts, pending } = await useAsyncData('all-posts', () => 
-  queryCollection('posts')
-    .order('publishedAt', 'DESC')
-    .all()
+  $fetch('/api/posts-list')
 )
 
 const displayCount = ref(POSTS_PER_PAGE)
