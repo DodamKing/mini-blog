@@ -127,15 +127,6 @@
         </div>
       </div>
     </main>
-
-    <!-- 푸터 -->
-    <footer class="bg-white border-t border-gray-100">
-      <div class="max-w-4xl mx-auto px-5 md:px-8 py-8 text-center">
-        <p class="text-sm text-gray-500">
-          © 2026 라온로그. All rights reserved.
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 

@@ -26,7 +26,8 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [
-        { name: 'google-site-verification', content: 'PlYdRNSi1zGbnQC-1UtvTw81FjJ-zoEHv4n_V4dW360' }
+        { name: 'google-site-verification', content: 'PlYdRNSi1zGbnQC-1UtvTw81FjJ-zoEHv4n_V4dW360' },
+        { name: 'naver-site-verification', content: '756c70300fa67ac7c867f426e913b68c0db21e64' }
       ],
       script: [
         {
